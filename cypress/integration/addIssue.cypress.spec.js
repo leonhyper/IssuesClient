@@ -15,5 +15,10 @@ describe('AddIssue page', () => {
     cy.get('button[type=submit]').click();
     cy.contains('Thanks for your sharing!').should('exist');
   });
-
+  it("shows error messages for incomplete form fields", () => {
+    cy.get('button[type=submit]').click();
+    cy.get('.error').contains('Body')
+    cy.get('input[data-test=text]').type('Who');
+    cy.get('.error').contains('least')
+  });
 } )
