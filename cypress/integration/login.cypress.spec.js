@@ -10,21 +10,16 @@ describe('Login page',() => {
     cy.get('#name').type('Han');
     cy.get('#pass').type('111111');
     cy.get('button[data-test=login]').click();
-    cy.wait(5000)
-    cy.contains('Welcome,Han!').should('exist');
-    cy.url().should('include', 'http://localhost:8080/#/')
-    cy.wait(5000)
+    cy.url().should('eq', 'http://localhost:8080/#/')
   })
   it("shows error message if either name and pass is valid ",() => {
     cy.get('button[data-test=login]').click();
     cy.contains('User name can not be empty!').should('exist');
     cy.contains('Password cannot be empty!').should('exist');
-    cy.get('#name').type('1');
-    cy.get('#pass').type('11');
-    cy.get('button[data-test=login]').click();
-    cy.wait(5000)
-    cy.contains('Invalid username or password!').should('exist');
-    cy.wait(5000)
+  })
+  it("skip to sign up page after sign up button is clicked",() => {
+    cy.get('button[data-test="register"]').click();
+    cy.url().should('eq', 'http://localhost:8080/#/register')
   })
 
 })
