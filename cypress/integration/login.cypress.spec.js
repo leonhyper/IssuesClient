@@ -1,6 +1,5 @@
 describe('Login page',() => {
   beforeEach(() => {
-    cy.request('mongodb://issuesdb:1013702057zs@ds139883.mlab.com:39883/issues-test')
     cy.visit("/");
     // Click Donate navbar link
     cy.get('.navbar-nav:nth-child(2)').

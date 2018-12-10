@@ -8,6 +8,7 @@ cache:
 before_script:
 - npm install -g httpserver
 - npm run build
+- cd dist && httpserver -p 8080 &
 script:
 - npx cypress run
 deploy:
