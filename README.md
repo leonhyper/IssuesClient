@@ -68,7 +68,7 @@ http://outstanding-whistle.surge.sh
 
 ## Extra features.
 
-. . . . Briefly state any extra aspects of your automation process that you feel should be high-lighted . . . . .
+Travis ci and auto deployment succeeded.
 
 ## Appendix.
 

@@ -9,8 +9,10 @@ describe('Login page',() => {
   it("allows a user with valid name and password to login",() => {
     cy.get('#name').type('Han');
     cy.get('#pass').type('111111');
+    cy.contains('User name can not be empty!').should('not.exist');
+    cy.contains('Password cannot be empty!').should('not.exist');
     cy.get('button[data-test=login]').click();
-    cy.url().should('eq', 'http://localhost:8080/#/')
+    cy.url().should('include', 'http://localhost:8080/#/')
   })
   it("shows error message if either name and pass is valid ",() => {
     cy.get('button[data-test=login]').click();
