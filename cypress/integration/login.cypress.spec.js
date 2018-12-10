@@ -9,17 +9,17 @@ describe('Login page',() => {
   it("allows a user with valid name and password to login",() => {
     cy.get('#name').type('Han');
     cy.get('#pass').type('111111');
-    cy.get('button[data-test=login]').click();
+    cy.get('button[data-test=login]',{timeout: 5000}).click();
     cy.contains('Welcome,Han!').should('exist');
     cy.url().should('include', 'http://localhost:8080/#/')
   })
   it("shows error message if either name and pass is valid ",() => {
-    cy.get('button[data-test=login]').click();
+    cy.get('button[data-test=login]',{timeout: 3000}).click();
     cy.contains('User name can not be empty!').should('exist');
     cy.contains('Password cannot be empty!').should('exist');
     cy.get('#name').type('1');
     cy.get('#pass').type('11');
-    cy.get('button[data-test=login]').click();
+    cy.get('button[data-test=login]',{timeout: 5000}).click();
     cy.contains('Invalid username or password!').should('exist');
   })
 
