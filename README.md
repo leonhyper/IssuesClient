@@ -58,7 +58,7 @@ Background music is attached to the home page.
 
 . . . URL of the Travis build page for the Vue app, e.g.
 
-https://travis-ci.org/diarmuidoconnor/donationsSPA
+https://travis-ci.org/leonhyper/issuesClient
 
 ## Automated Deployment.
 
@@ -76,113 +76,102 @@ Travis ci and auto deployment succeeded.
 
      $ npx cypress run
 
-(Run Starting)
-
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Cypress:    3.1.3                                                                              │
-  │ Browser:    Electron 59 (headless)                                                             │
-  │ Specs:      3 found (addIssue.cypress.spec.js, home.cypress.spec.js, login.cypress.spec.js)    │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+      Running: addIssue.cypress.spec.js...                                                     (1 of 3)
 
 
-────────────────────────────────────────────────────────────────────────────────────────────────────
-
-  Running: addIssue.cypress.spec.js...                                                     (1 of 3)
-
-
-  AddIssue page
-    √ allows a valid issue to be submitted (3850ms)
-    √ shows error messages for incomplete form fields (1380ms)
+        AddIssue page
+          √ allows a valid issue to be submitted (4019ms)
+          √ shows error messages for incomplete form fields (1212ms)
 
 
-  2 passing (5s)
+        2 passing (5s)
 
 
-  (Results)
+        (Results)
 
-  ┌────────────────────────────────────────┐
-  │ Tests:        2                        │
-  │ Passing:      2                        │
-  │ Failing:      0                        │
-  │ Pending:      0                        │
-  │ Skipped:      0                        │
-  │ Screenshots:  0                        │
-  │ Video:        false                    │
-  │ Duration:     5 seconds                │
-  │ Spec Ran:     addIssue.cypress.spec.js │
-  └────────────────────────────────────────┘
-
-
-────────────────────────────────────────────────────────────────────────────────────────────────────
-
-  Running: home.cypress.spec.js...                                                         (2 of 3)
+        ┌────────────────────────────────────────┐
+        │ Tests:        2                        │
+        │ Passing:      2                        │
+        │ Failing:      0                        │
+        │ Pending:      0                        │
+        │ Skipped:      0                        │
+        │ Screenshots:  0                        │
+        │ Video:        false                    │
+        │ Duration:     5 seconds                │
+        │ Spec Ran:     addIssue.cypress.spec.js │
+        └────────────────────────────────────────┘
 
 
-  Home page
-    √ Shows a header (2126ms)
-    Navigation bar
-      √ Shows the required links (1328ms)
-      √ Redirects when links are clicked (695ms)
+      ────────────────────────────────────────────────────────────────────────────────────────────────────
+
+        Running: home.cypress.spec.js...                                                         (2 of 3)
 
 
-  3 passing (4s)
+        Home page
+          √ Shows a header (2131ms)
+          Navigation bar
+            √ Shows the required links (1088ms)
+            √ Redirects when links are clicked (631ms)
 
 
-  (Results)
-
-  ┌────────────────────────────────────┐
-  │ Tests:        3                    │
-  │ Passing:      3                    │
-  │ Failing:      0                    │
-  │ Pending:      0                    │
-  │ Skipped:      0                    │
-  │ Screenshots:  0                    │
-  │ Video:        false                │
-  │ Duration:     4 seconds            │
-  │ Spec Ran:     home.cypress.spec.js │
-  └────────────────────────────────────┘
+        3 passing (4s)
 
 
-────────────────────────────────────────────────────────────────────────────────────────────────────
+        (Results)
 
-  Running: login.cypress.spec.js...                                                        (3 of 3)
-
-
-  Login page
-    √ allows a user with valid name and password to login (3544ms)
-    √ shows error message if either name and pass is valid  (1056ms)
-    √ skip to sign up page after sign up button is clicked (525ms)
-
-
-  3 passing (5s)
-
-
-  (Results)
-
-  ┌─────────────────────────────────────┐
-  │ Tests:        3                     │
-  │ Passing:      3                     │
-  │ Failing:      0                     │
-  │ Pending:      0                     │
-  │ Skipped:      0                     │
-  │ Screenshots:  0                     │
-  │ Video:        false                 │
-  │ Duration:     5 seconds             │
-  │ Spec Ran:     login.cypress.spec.js │
-  └─────────────────────────────────────┘
+        ┌────────────────────────────────────┐
+        │ Tests:        3                    │
+        │ Passing:      3                    │
+        │ Failing:      0                    │
+        │ Pending:      0                    │
+        │ Skipped:      0                    │
+        │ Screenshots:  0                    │
+        │ Video:        false                │
+        │ Duration:     4 seconds            │
+        │ Spec Ran:     home.cypress.spec.js │
+        └────────────────────────────────────┘
 
 
-====================================================================================================
+      ────────────────────────────────────────────────────────────────────────────────────────────────────
 
-  (Run Finished)
+        Running: login.cypress.spec.js...                                                        (3 of 3)
 
 
-      Spec                                                Tests  Passing  Failing  Pending  Skipped
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ √ addIssue.cypress.spec.js                  00:05        2        2        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ √ home.cypress.spec.js                      00:04        3        3        -        -        - │
-  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
-  │ √ login.cypress.spec.js                     00:05        3        3        -        -        - │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
-    All specs passed!                           00:14        8        8        -        -        -
+        Login page
+          √ allows a user with valid name and password to login (3321ms)
+          √ shows error message if either name and pass is valid  (1329ms)
+          √ skip to sign up page after sign up button is clicked (548ms)
+
+
+        3 passing (5s)
+
+
+        (Results)
+
+        ┌─────────────────────────────────────┐
+        │ Tests:        3                     │
+        │ Passing:      3                     │
+        │ Failing:      0                     │
+        │ Pending:      0                     │
+        │ Skipped:      0                     │
+        │ Screenshots:  0                     │
+        │ Video:        false                 │
+        │ Duration:     5 seconds             │
+        │ Spec Ran:     login.cypress.spec.js │
+        └─────────────────────────────────────┘
+
+
+      ====================================================================================================
+
+        (Run Finished)
+
+
+            Spec                                                Tests  Passing  Failing  Pending  Skipped
+        ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+        │ √ addIssue.cypress.spec.js                  00:05        2        2        -        -        - │
+        ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+        │ √ home.cypress.spec.js                      00:04        3        3        -        -        - │
+        ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+        │ √ login.cypress.spec.js                     00:05        3        3        -        -        - │
+        └────────────────────────────────────────────────────────────────────────────────────────────────┘
+          All specs passed!                           00:14        8        8        -        -        -
