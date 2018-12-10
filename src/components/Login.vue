@@ -7,14 +7,14 @@
             <div class="form">
               <el-form ref="loginForm" :model="user" :rules="rules" status-icon label-width="80px">
                 <el-form-item label="username" prop="name">
-                  <el-input v-model="user.name"></el-input>
+                  <el-input id="name" data-test="name" v-model="user.name"></el-input>
                 </el-form-item>
                 <el-form-item label="password" prop="pass">
-                  <el-input v-model="user.pass" type="string"></el-input>
+                  <el-input id="pass" data-test="pass" v-model="user.pass" type="string"></el-input>
                 </el-form-item>
                 <div class="button">
-                  <el-button type="primary" icon="el-icon-upload" @click="login">Log in</el-button>
-                  <el-button type="primary" icon="el-icon-upload" @click="register">Sign up</el-button>
+                  <el-button data-test="login" type="primary" icon="el-icon-upload" @click="login">Log in</el-button>
+                  <el-button data-test="register" type="primary" icon="el-icon-upload" @click="register">Sign up</el-button>
                 </div>
               </el-form>
             </div>

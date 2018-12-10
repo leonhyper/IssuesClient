@@ -1,17 +1,21 @@
 dist: trusty
 language: node_js
 node_js:
-- stable
+- "stable"
+cache:
+  directories:
+  - node_modules
+before_script:
+- npm install -g httpserver
+- npm run custom-build
+- cd dist && httpserver -p 8080 &
 script:
-- npm run coverage
-after_success:
-- npm run publish-coverage
-branches:
-  only: development
-notifications:
-email:
-  recipients:
-  - one@example.com      # change to your own address
-  - other@example.com    # uae other (optional)
-  on_success: never        # default: change
-  on_failure: always       # default: always
+- npx cypress run
+deploy:
+  provider: surge
+  skip_cleanup: true
+  domain: your-domain.surge.sh
+  project: ./dist
+  on:
+    branch: master
+

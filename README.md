@@ -1,30 +1,38 @@
-# vue
+# Assignment 2 - Vue app - Automated development process.
 
-> A Vue.js project
+Name: ... your name ...
 
-## Build Setup
+Student No.:  . . . . . .
 
-``` bash
-# install dependencies
-npm install
+## Overview.
 
-# serve with hot reload at localhost:8080
-npm run dev
+...... A statement of the Vue app's context and objectives (just a paragraph)........
 
-# build for production with minification
-npm run build
+## E2E Testing.
 
-# build for production and view the bundle analyzer report
-npm run build --report
+. . . A listing of the output generated locally from running ONE of your spec test files (choose the best one). The command to produce this is similar to the following:
 
-# run unit tests
-npm run unit
+     $ npx cypress run --spec cypress/integration/donations.spec.js
 
-# run e2e tests
-npm run e2e
+## Continuous Integration.
 
-# run all tests
-npm test
-```
+. . . URL of the Travis build page for the Vue app, e.g.
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+https://travis-ci.org/diarmuidoconnor/donationsSPA
+
+## Automated Deployment.
+
+.... Specify the URL of the auto-deployed Vue app, e.g. 
+
+http://profuse-trick.surge.sh/
+
+## Extra features.
+
+. . . . Briefly state any extra aspects of your automation process that you feel should be high-lighted . . . . .
+
+## Appendix.
+
+. . . .  A listing of the output generated from running locally all of your spec test files. The command to produce this is:
+
+     $ npx cypress run
+

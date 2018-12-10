@@ -16,7 +16,7 @@
     </div>
     <div class="form-group" :class="{ 'form-group--error': $v.text.$error }">
       <label class="form-control-label" name="text">Issue Body</label>
-      <input class="form__input" type="text" v-model="text"/>
+      <input data-test="text" class="form__input" type="text" v-model="text"/>
     </div>
     <div class="error" v-if="!$v.text.required">Body is Required</div>
     <div class="error" v-if="!$v.text.minLength">Body must have at least {{$v.text.$params.minLength.min}} letters.</div>
